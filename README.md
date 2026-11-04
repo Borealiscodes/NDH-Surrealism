@@ -8,7 +8,7 @@ This repository bridges the theoretical failure modes analyzed in the ai-dreams 
 Traditional surrealism relied on human psychic automatism to unlock the subconscious. NDH-Surrealism replaces the subconscious with the continuous Riemannian geometry of a destabilized latent manifold, establishing a direct pipeline from algorithmic hallucination to robotic execution.
 
 <pre> 
-       
+
        [ AI Dreams Lab ]
   (Liquefaction / Volumetric Drift)
                │
@@ -24,41 +24,41 @@ Traditional surrealism relied on human psychic automatism to unlock the subconsc
       [ Physical Studio ]
  (Robotic Plotter / Fluid Mediums)
 
-</pre>
-
+       </pre>
+       
 🔮 Core Geometric-Surrealist Engines
 
-The repository organizes all nine automated execution modules from the geometry lab, pairing specific high-dimensional failure states with physical canvas rendering modes:
+The repository organizes all nine automated execution modules from the geometry lab, pairing specific high-dimensional failure states with physical canvas rendering modes and multi-color toolhead macro configurations:
 
 Spatial Wave Subsystem
 
-* 🟥 Curvature-Breathing Compiler (src/ndh_surrealism/engines/spatial_wave.py — Op 01): Translates latent curvature tensor spikes into expanding, pulsating stroke concentricity that mimics the aesthetic of "breathing walls."
-* 🟪 Spectral Cascade Observatory (src/ndh_surrealism/engines/spatial_wave.py — Op 06): Tracks high-dimensional eigenvalue step transformations to inject nested sub-strokes and fractal recursive paths.
+* 🟥 Curvature-Breathing Compiler (src/ndh_surrealism/engines/spatial_wave.py — Op 01): Translates latent curvature tensor spikes into expanding, pulsating stroke concentricity that mimics the aesthetic of "breathing walls." (Maps to Multi-Color Channel Tool T3).
+* 🟪 Spectral Cascade Observatory (src/ndh_surrealism/engines/spatial_wave.py — Op 06): Tracks high-dimensional eigenvalue step transformations to inject nested sub-strokes and fractal recursive paths. (Maps to Multi-Color Channel Tool T4).
 
 Fluidic & Rotational Subsystem
 
-* 🟩 Liquefaction Fluidics Controller (src/ndh_surrealism/engines/manifold_melting.py — Op 04): Controls the velocity and pressure of fluid delivery systems to physically simulate the melting, dripping, and dissolving of a degrading metric tensor.
-* 🟫 Rotational Vortex Drive (src/ndh_surrealism/engines/holonomy_vortex.py — Op 07): Maps accumulated rotational holonomy twist to 2D polar space coordinates, forcing the toolhead into precise, non-terminating spiral trajectories.
+* 🟩 Liquefaction Fluidics Controller (src/ndh_surrealism/engines/manifold_melting.py — Op 04): Controls the velocity and pressure of fluid delivery systems to physically simulate the melting, dripping, and dissolving of a degrading metric tensor. (Maps to Multi-Color Channel Tool T1).
+* 🟫 Rotational Vortex Drive (src/ndh_surrealism/engines/holonomy_vortex.py — Op 07): Maps accumulated rotational holonomy twist to 2D polar space coordinates, forcing the toolhead into precise, non-terminating spiral trajectories. (Maps to Multi-Color Channel Tool T2).
 
 Discontinuity Subsystem
 
-* 🟦 Volumetric Drift Planner (src/ndh_surrealism/engines/discontinuity.py — Op 05): Accumulates un-rectified tracking offsets across sequential semantic updates, creating jarring, dream-logic composition offsets.
-* ⬛ Collapse-Surface Interrupter (src/ndh_surrealism/engines/discontinuity.py — Op 08): Detects sudden metric dimension drops (\(\det(g) \to 0\)) and issues absolute zero fluid signals to trigger automated rapid Z-axis hardware lifts, creating whitespace structural voids.
+* 🟦 Volumetric Drift Planner (src/ndh_surrealism/engines/discontinuity.py — Op 05): Accumulates un-rectified tracking offsets across sequential semantic updates, creating jarring, dream-logic composition offsets. (Maps to Multi-Color Channel Tool T5).
+* ⬛ Collapse-Surface Interrupter (src/ndh_surrealism/engines/discontinuity.py — Op 08): Detects sudden metric dimension drops (\(\det(g) \to 0\)) and issues absolute zero fluid signals to trigger automated rapid Z-axis hardware lifts, creating whitespace structural voids. (Maps to Multi-Color Channel Tool T6).
 
 Compositional Subsystem
 
-* 🟧 Chimera Fusion Renderer (src/ndh_surrealism/engines/compositional.py — Op 02): Averages symmetrical layout nodes across overlapping matrix boundaries to melt disparate concepts into unified physical shapes.
-* 🟨 Dream Potential Field Mapper (src/ndh_surrealism/engines/compositional.py — Op 03): Projects multi-field attraction forces onto baseline coordinates, pulling layout nodes toward high-density attractor wells to cluster the composition.
-* ⬜ Full Dream Diagnostic Pipeline (src/ndh_surrealism/engines/compositional.py — Op 09): Sequentially segments and routes input matrices through the entire multi-operator suite to output a unified topological canvas fingerprint.
+* 🟧 Chimera Fusion Renderer (src/ndh_surrealism/engines/compositional.py — Op 02): Averages symmetrical layout nodes across overlapping matrix boundaries to melt disparate concepts into unified physical shapes. (Maps to Multi-Color Channel Tool T7).
+* 🟨 Dream Potential Field Mapper (src/ndh_surrealism/engines/compositional.py — Op 03): Projects multi-field attraction forces onto baseline coordinates, pulling layout nodes toward high-density attractor wells to cluster the composition. (Maps to Multi-Color Channel Tool T8).
+* ⬜ Full Dream Diagnostic Pipeline (src/ndh_surrealism/engines/compositional.py — Op 09): Sequentially segments and routes input matrices through the entire multi-operator suite to output a unified topological canvas fingerprint. (Executes dynamic off-canvas tool changing cycles across channel T0).
 
 🛠 Repository Structure
 
-<pre> 
-
+<pre>
+       
 NDH-Surrealism/
 ├── .github/
-│   └── workflows/           # Localized CI/CD validation suites
-│       └── verify.yml
+│   └── workflows/           # Cloud-based continuous integration runner
+│       └── verify.yml       # Invariant validation checking script
 ├── profiles/                # Ingestible JSON dream telemetry profiles
 │   ├── dream_01_curvature.json
 │   ├── dream_04_liquefaction.json
@@ -78,12 +78,14 @@ NDH-Surrealism/
 │       │   ├── manifold_melting.py
 │       │   └── spatial_wave.py
 │       └── hardware/       # Low-level industrial machine driver translation
-│           ├── gcode.py
+│           ├── SPECIFICATION.md # Hardware wiring pinouts & calibration logs
+│           ├── gcode.py     # Volumetric extrusion & color-swapping compiler
 │           ├── leveling.py  # Bilinear canvas surface-mesh leveler
+│           ├── lh_adapter.py # Lean-Hallucination-Guard intercept enclave interface
 │           └── streamer.py  # Serial communication hardware streaming interface
 ├── tests/
 │   ├── test_geometry.py    # Pytest suites for boundary containment metrics
-│   └── Verification.lean   # Lean 4 formal verification for boundary safety
+│   └── Verification.lean   # Lean 4 formal verification safety proofs
 ├── lakefile.toml           # Lean 4 dependency configuration
 ├── pyproject.toml          # Python environmental dependency specifications
 ├── run_pipeline.sh         # Master automation orchestration shell utility
@@ -96,7 +98,7 @@ NDH-Surrealism/
 
 To preserve total workspace sovereignty and keep creative systems self-contained, the runtime operates entirely on local hardware with zero network dependencies.
 bash
-# Initialize the local virtual environment and install tracking dependencies
+# Initialize the local virtual environment and install dependencies
 make env
 
 # Run the pytest suite to validate geometric boundaries and fluidics scales
@@ -108,6 +110,13 @@ make verify-proofs
 # Run the complete pipeline end-to-end (Compilation, Validation, Calibration, and Stream)
 ./run_pipeline.sh dream_diagnostic /dev/ttyUSB0
 Use code with caution.
+
+🛡️ Active Verification & Invariant Guards
+
+The framework is structurally reinforced by a multi-layer verification enclave that prevents code execution before it touches real-world hardware canvas surfaces:
+1. The lhguard Enclave Interceptor: Intercepts incoming 80-dimensional arrays before routing, terminating processes instantly if metric tension constraints or code mimics fail.
+2. The Bilinear Mesh Auto-Leveler: Modulates physical Z-axis tool depth using a dynamic \(3 \times 3\) height-map grid to maintain stable contact pressure on warped materials.
+3. The Formal Lean 4 Vault: Hosts interactive machine proofs confirming Spatial Boundary Containment, Off-Canvas Tool Changing Separation Invariants, and Fluidics Viscosity Flow Stalling Prevention Invariants.
 
 📜 Ethical Licensing & Operational Boundary
 
