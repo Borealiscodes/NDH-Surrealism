@@ -5,6 +5,7 @@ import numpy as np
 from ndh_surrealism.engines.manifold_melting import LiquefactionFluidicsCompiler
 from ndh_surrealism.engines.holonomy_vortex import RotationalVortexDrive
 from ndh_surrealism.engines.spatial_wave import SpatialWaveSubsystem
+from ndh_surrealism.engines.discontinuity import DiscontinuitySubsystem
 from ndh_surrealism.hardware.gcode import NDHGCodeCompiler
 
 
@@ -18,6 +19,7 @@ class NDHSurrealismCompiler:
         self.liquefaction_engine = LiquefactionFluidicsCompiler()
         self.vortex_engine = RotationalVortexDrive()
         self.wave_engine = SpatialWaveSubsystem()
+        self.discontinuity_engine = DiscontinuitySubsystem()
         self.hardware_compiler = NDHGCodeCompiler()
         print(f"[*] NDH-Surrealism Engine Initialized. Bounds: {canvas_width}x{canvas_height}")
 
@@ -65,6 +67,14 @@ class NDHSurrealismCompiler:
             compiled_paths = self.wave_engine.generate_spectral_cascades(
                 manifold_space, base_paths, (self.canvas_width, self.canvas_height)
             )
+        elif operator == "symbolic_drift":
+            compiled_paths = self.discontinuity_engine.generate_symbolic_drift(
+                manifold_space, base_paths, (self.canvas_width, self.canvas_height)
+            )
+        elif operator == "collapse_surface":
+            compiled_paths = self.discontinuity_engine.generate_surface_collapses(
+                manifold_space, base_paths, (self.canvas_width, self.canvas_height)
+            )
         else:
             print(f"[!] Operator '{operator}' not explicitly compiled. Using uniform fallback.")
             compiled_paths = [(x, y, 0.1) for x, y in base_paths]
@@ -72,16 +82,3 @@ class NDHSurrealismCompiler:
         # Step 3: Hardware step translation and G-code export block compilation
         self.hardware_compiler.compile_to_gcode(compiled_paths, output_gcode_path)
         return compiled_paths
-
-
-if __name__ == "__main__":
-    parser = argparse.ArgumentParser(description="NDH-Surrealism Core Compiler")
-    parser.add_argument("--input", type=str, required=True, help="Path to dream profile JSON")
-    parser.add_argument("--output", type=str, required=True, help="Path to write compiled G-code")
-    args = parser.parse_args()
-
-    compiler = NDHSurrealismCompiler()
-    try:
-        compiler.compile_pipeline(args.input, args.output)
-    except Exception as e:
-        print(f"[-] Execution halted: {e}")
