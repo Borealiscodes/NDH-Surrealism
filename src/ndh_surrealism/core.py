@@ -3,6 +3,7 @@ import json
 import argparse
 import numpy as np
 from ndh_surrealism.engines.manifold_melting import LiquefactionFluidicsCompiler
+from ndh_surrealism.engines.holonomy_vortex import RotationalVortexDrive
 from ndh_surrealism.hardware.gcode import NDHGCodeCompiler
 
 
@@ -13,6 +14,7 @@ class NDHSurrealismCompiler:
         self.canvas_height = canvas_height
         # Initialize processing subsystems
         self.liquefaction_engine = LiquefactionFluidicsCompiler()
+        self.vortex_engine = RotationalVortexDrive()
         self.hardware_compiler = NDHGCodeCompiler()
         print(
             f"[*] NDH-Surrealism Engine Initialized. Canvas Bounds: {canvas_width}x{canvas_height}"
@@ -49,6 +51,10 @@ class NDHSurrealismCompiler:
         # Step 2: Route structural anomalies through designated modification engine
         if operator == "liquefaction":
             compiled_paths = self.liquefaction_engine.generate_melting_paths(
+                manifold_space, base_paths, (self.canvas_width, self.canvas_height)
+            )
+        elif operator == "holonomy_vortex":
+            compiled_paths = self.vortex_engine.generate_vortex_paths(
                 manifold_space, base_paths, (self.canvas_width, self.canvas_height)
             )
         else:
