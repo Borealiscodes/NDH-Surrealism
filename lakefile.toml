@@ -1,0 +1,7 @@
+name = "ndh_verification"
+version = "1.0.0"
+keywords = ["lean4", "verification"]
+
+[[lean_lib]]
+name = "NDHVerification"
+srcDir = "tests"
