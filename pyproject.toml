@@ -17,6 +17,7 @@ dependencies = [
     "numpy>=1.24.0",
     "scipy>=1.10.0",
     "pyserial>=3.5",
+    "lhguard @ git+https://github.com",
 ]
 
 [project.optional-dependencies]
