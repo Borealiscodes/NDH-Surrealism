@@ -27,46 +27,79 @@ Traditional surrealism relied on human psychic automatism to unlock the subconsc
 
 🔮 Core Geometric-Surrealist Engines
 
-The repository is organized around nine automated execution modules, each translating a specific geometric instability into a physical canvas technique:
-* 🟥 Curvature-Breathing Compiler (src/engines/breathing_walls.py): Translates latent curvature tensor spikes into expanding, pulsating stroke concentricity that mimics the aesthetic of "breathing walls."
-* 🟧 Chimera Fusion Renderer (src/engines/conceptual_fusion.py): Operates on hybrid conceptual boundaries to calculate the precise geometric intersections where disparate objects melt into singular, continuous forms.
-* 🟩 Liquefaction Fluidics Controller (src/engines/manifold_melting.py): Controls the velocity and pressure of robotic paint delivery systems to physically simulate the melting, dripping, and dissolving of a degrading metric tensor.
-* 🟦 Volumetric Drift Planner (src/engines/symbolic_drift.py): Employs semantic holonomy tracking to introduce calculated, un-rectified tracking offsets, creating disjointed, dream-logic composition transitions across the canvas.
-* 🟫 Rotational Vortex Drive (src/engines/holonomy_vortex.py): Maps rotational drift directly to tool-head rotational axes, forcing the painting rig into precise, non-terminating spiral geometry.
-* ⬛ Collapse-Surface Interrupter (src/engines/topological_snap.py): Detects metric degeneracy (\(\det(g) \to 0\)) and executes abrupt, high-acceleration mechanical cuts and tool lifts, creating sharp topological breaks on the physical media.
+The repository organizes all nine automated execution modules from the geometry lab, pairing specific high-dimensional failure states with physical canvas rendering modes:
+
+Spatial Wave Subsystem
+
+* 🟥 Curvature-Breathing Compiler (src/engines/spatial_wave.py - Op 01): Translates latent curvature tensor spikes into expanding, pulsating stroke concentricity that mimics the aesthetic of "breathing walls."
+* 🟪 Spectral Cascade Observatory (src/engines/spatial_wave.py - Op 06): Tracks high-dimensional eigenvalue step transformations to inject nested sub-strokes and fractal recursive paths.
+
+Fluidic & Rotational Subsystem
+
+* 🟩 Liquefaction Fluidics Controller (src/engines/manifold_melting.py - Op 04): Controls the velocity and pressure of fluid delivery systems to physically simulate the melting, dripping, and dissolving of a degrading metric tensor.
+* 🟫 Rotational Vortex Drive (src/engines/holonomy_vortex.py - Op 07): Maps accumulated rotational holonomy twist to 2D polar space coordinates, forcing the toolhead into precise, non-terminating spiral trajectories.
+
+Discontinuity Subsystem
+
+* 🟦 Volumetric Drift Planner (src/engines/discontinuity.py - Op 05): Accumulates un-rectified tracking offsets across sequential semantic updates, creating jarring, dream-logic composition offsets.
+* ⬛ Collapse-Surface Interrupter (src/engines/discontinuity.py - Op 08): Detects sudden metric dimension drops (\(\det(g) \to 0\)) and issues absolute zero fluid signals to trigger automated rapid Z-axis hardware lifts, creating whitespace structural voids.
+
+Compositional Subsystem
+
+* 🟧 Chimera Fusion Renderer (src/engines/compositional.py - Op 02): Averages symmetrical layout nodes across overlapping matrix boundaries to melt disparate concepts into unified physical shapes.
+* 🟨 Dream Potential Field Mapper (src/engines/compositional.py - Op 03): Projects multi-field attraction forces onto baseline coordinates, pulling layout nodes toward high-density attractor wells to cluster the composition.
+* ⬜ Full Dream Diagnostic Pipeline (src/engines/compositional.py - Op 09): Sequentially segments and routes input matrices through the entire multi-operator suite to output a unified topological canvas fingerprint.
 
 🛠 Repository Structure
 
 <pre> 
+       
 NDH-Surrealism/
-├── .github/
-│   └── workflows/           # Localized CI/CD validation suites
+├── profiles/                # Ingestible JSON dream telemetry profiles
+│   ├── dream_01_curvature.json
+│   ├── dream_04_liquefaction.json
+│   ├── dream_05_drift.json
+│   ├── dream_06_cascade.json
+│   ├── dream_07_vortex.json
+│   ├── dream_08_collapse.json
+│   └── dream_09_diagnostic.json
 ├── src/
-│   ├── ndh_surrealism/
-│   │   ├── __init__.py
-│   │   ├── core.py         # Main transformation pipeline
-│   │   ├── engines/        # The 9 Geometric Hallucination Compilers
-│   │   └── hardware/       # Robotic G-code and tool-path generation
+│   └── ndh_surrealism/
+│       ├── __init__.py
+│       ├── core.py         # Primary transformation pipeline & router
+│       ├── engines/        # The 9 Geometric Hallucination Compilers
+│       │   ├── compositional.py
+│       │   ├── discontinuity.py
+│       │   ├── holonomy_vortex.py
+│       │   ├── manifold_melting.py
+│       │   └── spatial_wave.py
+│       └── hardware/       # Low-level industrial machine driver translation
+│           └── gcode.py
 ├── tests/
-│   ├── test_geometry.py    # Pytest suites for manifold stability
+│   ├── test_geometry.py    # Pytest suites for boundary containment metrics
 │   └── Verification.lean   # Lean 4 formal verification for boundary safety
 ├── lakefile.toml           # Lean 4 dependency configuration
-├── pyproject.toml          # Modern Python packaging configuration
-├── Makefile                # Localized pipeline orchestration
+├── pyproject.toml          # Python environmental dependency specifications
+├── Makefile                # Localized pipeline runtime orchestration
 └── README.md
+
+</pre>
 
 🚀 Localized Pipeline Execution
 
-To protect the creative environment, the runtime runs entirely on localized studio hardware with zero external dependencies.
+To preserve total workspace sovereignty and keep creative systems self-contained, the runtime operates entirely on local hardware with zero network dependencies.
 bash
-# Initialize the local geometric environment
+# Initialize the local virtual environment and dependencies
 make env
 
-# Run the Lean 4 formal verification suite to guarantee canvas boundary integrity
+# Run the pytest suite to validate geometric boundaries and fluidics scales
+make test
+
+# Execute the Lean 4 formal verification to mathematically prove coordinate containment
 make verify-proofs
 
-# Compile an AI Dream configuration file into G-code tool-paths
-python -m ndh_surrealism.core --input profiles/dream_04_liquefaction.json --output /dev/ttyUSB0
+# Compile an interactive dream profile down to industrial G-code machine paths
+python3 src/ndh_surrealism/core.py --input profiles/dream_09_diagnostic.json --output output/canvas_plot.gcode
 Use code with caution.
 
 📜 Ethical Licensing & Operational Boundary
