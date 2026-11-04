@@ -16,9 +16,8 @@ The models and specifications are exploratory assets for algorithmic simulation 
 🎨 Intended Use & Project Scope
 
 Serving as an open-ended Request for Comments (RFC) bridging generative theory and autonomic art, any physical or chemical deployment demands independent engineering validation and licensed safety sign-off. The authors accept no liability for damages resulting from the literal application of these theoretical specifications.
-You can copy and paste this text directly into a new DISCLAIMER.md file in your repo.
-Let me know if you would also like a condensed, single-paragraph version to insert at the very top of your main README.md as a quick warning banner.
 
+Hedling, B. S. (2026). NDH-Surrealism (v1.0): An Algorithmic RFC and Conceptual Specimen for Generative Latent Deposition (Version v1.0). Zenodo. https://doi.org/10.5281/zenodo.23963389
 
 # 🎨 NDH-Surrealism
 
