@@ -1,3 +1,21 @@
+# DISCLAIMER
+
+
+⚠️ NOTICE: Conceptual Systems-Art Framework & Theoretical Specification
+
+This repository does not contain empirically validated industrial engineering source code, manufacturing recipes, or laboratory methodologies.
+NDH-Surrealism is a theoretical architecture and conceptual systems-art framework exploring the translation of generative AI latent manifolds into balanced ternary mechanical trajectories.
+
+🚫 Professional Boundaries & Domain Disclaimers
+
+The models and specifications are exploratory assets for algorithmic simulation and artistic expression, lacking empirical validation or safety certification across:
+• Materials Science: Chemical formulations and passivating rules are speculative mathematical analogies, not tested syntheses.
+• Fluid Dynamics: Target shear-thinning and recovery profiles are unverified digital boundary constraints.
+• Industrial Automation: High-frequency step mechanics and acceleration parameters are uncalibrated models; applying them to physical hardware risks severe mechanical failure and vibration.
+
+🎨 Intended Use & Project Scope
+
+Serving as an open-ended Request for Comments (RFC) bridging generative theory and autonomic art, any physical or chemical deployment demands independent engineering validation and licensed safety sign-off. The authors accept no liability for damages resulting from the literal application of these theoretical specifications.
 
 NDH‑Platforms and Canvas Suite — Open‑Source Geometric Framework License
 
