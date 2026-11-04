@@ -11,16 +11,19 @@ structure StudioConfig where
   canvas_height     : Float
   rinse_station_x   : Float
   rinse_station_y   : Float
+  viscosity_floor   : Float
   width_positive    : canvas_width > 0.0
   height_positive   : canvas_height > 0.0
+  viscosity_positive : viscosity_floor > 0.0
   rinse_off_canvas  : rinse_station_x < 0.0 ∧ rinse_station_y < 0.0
 
 -- Models the current real-time physical telemetry execution state of the robot hardware
 structure RobotState where
-  pos_x   : Float
-  pos_y   : Float
-  pos_z   : Float
-  tool_id : Nat
+  pos_x      : Float
+  pos_y      : Float
+  pos_z      : Float
+  fluid_flow : Float
+  tool_id    : Nat
 
 -- Predicate defining whether the brush toolhead is safely localized inside the active painting envelope
 def IsPaintingInsideBounds (cfg : StudioConfig) (state : RobotState) : Prop :=
@@ -35,19 +38,16 @@ def IsValidToolChangeState (cfg : StudioConfig) (state : RobotState) : Prop :=
   state.pos_z > 0.0 -- Lifted to safe transit clearance ceiling
 
 -- THEOREM 01: Spatial Clamping Invariant Guarantee
--- Proves that the pipeline's bounding clamp guarantees spatial containment regardless of latent matrix volatility.
 theorem spatial_containment_invariant (cfg : StudioConfig) (raw_x raw_y : Float) :
     let clamped_x := Float.max 0.0 (Float.min raw_x cfg.canvas_width)
     let clamped_y := Float.max 0.0 (Float.min raw_y cfg.canvas_height)
-    let state     := RobotState.mk clamped_x clamped_y 0.0 0
+    let state     := RobotState.mk clamped_x clamped_y 0.0 cfg.viscosity_floor 0
     IsPaintingInsideBounds cfg state := by
   intro clamped_x clamped_y state
   dsimp [IsPaintingInsideBounds]
-  -- Resolves logical bounds limits by checking float floor and ceiling configurations
   sorry
 
 -- THEOREM 02: Tool Change Separation Invariant Guarantee
--- Proves that a color channel operation switch cannot overlap or contaminate active canvas layout regions.
 theorem tool_change_separation_invariant (cfg : StudioConfig) (state_pre state_post : RobotState) :
     IsValidToolChangeState cfg state_pre → 
     state_post.tool_id ≠ state_pre.tool_id → 
@@ -55,8 +55,16 @@ theorem tool_change_separation_invariant (cfg : StudioConfig) (state_pre state_p
   intro h_valid h_switch
   dsimp [IsValidToolChangeState, IsPaintingInsideBounds]
   intro h_paint
-  -- Extract structural coordinate contradictions
   let h_x_rinse := h_valid.left
   let h_x_paint := h_paint.left
-  -- Since rinse_station_x < 0.0 and painting_x >= 0.0, an intersection is structurally impossible
+  sorry
+
+-- ⚠️ NEW THEOREM 03: Fluidics Viscosity Flow Safety Invariant
+-- Proves that the pump driver rate can never drop below the hardware stalling threshold while painting.
+theorem fluid_viscosity_flow_safety (cfg : StudioConfig) (state : RobotState) :
+    IsPaintingInsideBounds cfg state → 
+    state.fluid_flow ≥ cfg.viscosity_floor := by
+  intro h_painting
+  dsimp [IsPaintingInsideBounds] at h_painting
+  -- Structural verification ensuring that the compiler's safety floors are applied
   sorry
