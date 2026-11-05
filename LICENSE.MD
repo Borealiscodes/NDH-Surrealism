@@ -51,3 +51,28 @@ All reference parameters, differential operators, Christoffel forms, and Riemann
 
 The Work is provided “as-is,” without warranty of any kind, express or implied. The author carries no liability for downstream adaptations, third-party profile synchronization updates, or modifications that remove these baseline open-source safeguards.
 END OF LICENSE
+
+================================================================================
+PART 2: UPSTREAM DISCRETE ONTOLOGY & RESONANCE ALGEBRA LAYER
+================================================================================
+Copyright (c) 2026 Christopher Chenoweth, Peter Lodri, 8b Project, "Trinity Squad"
+Upstream Lineage: Balanced Ternary Manifolds, Consolidated Constitutional Ontology, Resonance Algebra, and adapted 8b no-float (.rs) execution rules.
+Reference Registry: https://vaked.dev
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
